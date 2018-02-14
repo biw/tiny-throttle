@@ -27,6 +27,6 @@ module.exports = {
     "func-style": ["error", "expression", { "allowArrowFunctions": true }],
     "func-names": ["error", "as-needed"],
     // "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js"]}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "rollup.config.js"]}]
   }
 }

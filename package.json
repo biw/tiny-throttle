@@ -19,7 +19,7 @@
     "lint": "node_modules/.bin/eslint **/*.js --fix",
     "pack": "node_modules/.bin/webpack -p",
     "reinstall": "rm -r node_modules && yarn cache clean && yarn",
-    "build": "npm-run-all --silent clean -p rollup -p minify:* -s docs size",
+    "build": "npm-run-all --silent clean -p rollup -p minify:* -s",
     "clean": "rimraf dist",
     "rollup": "rollup -c",
     "minify:cjs": "uglifyjs $npm_package_main -cm toplevel --source-map -o $npm_package_main",

@@ -1,5 +1,7 @@
 # tiny-throttle 🚗
 
+![Build Status](https://travis-ci.org/719Ben/tiny-throttle.svg?branch=master)
+
 A 311 byte (gziped) throttle & debounce package that is designed to replace lodash's `_.debounce()` & `_.throttle()`
 
 ## Install
