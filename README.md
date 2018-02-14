@@ -11,6 +11,12 @@ or
 ```bash
 npm install --save tiny-throttle
 ```
+or
+```html
+<script src="https://unpkg.com/tiny-throttle/dist/tiny-throttle.umd.js"></script>
+```
+
+Then you can find the library on `window.tinyThrottle`
 
 ## Usage
 

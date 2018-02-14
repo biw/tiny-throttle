@@ -8,7 +8,7 @@ export default {
   entry: 'src/index.js',
   useStrict: false,
   sourceMap: true,
-  moduleName: 'mini-debounce',
+  moduleName: 'tinyThrottle',
   plugins: [
     flow(),
     buble(),
