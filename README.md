@@ -6,9 +6,9 @@
 [![bundlephobia][bundlephobia-badge]][bundlephobia]
 [![MIT License][license-badge]][license]
 
-![Build Status](https://travis-ci.org/719Ben/tiny-throttle.svg?branch=master)
+A throttle & debounce package with a tiny file size.
 
-A 311 byte (gzipped) throttle & debounce package that is designed to replace lodash's `_.debounce()` & `_.throttle()`
+At only **331 bytes** it is **83% smaller than lodash's `_.debounce()` & `_.throttle()`**
 
 ## Install
 
@@ -37,14 +37,24 @@ import { debounce, throttle } from 'tiny-throttle'
 
 // on click, run a function
 // then wait 500 miliseconds from last click to run again on next click
-document.getElementById('button').onclick = debounce(doSomethingWithNetwork, 500, true)
+document.getElementById('button').onclick = debounce(
+  doSomethingWithNetwork,
+  500,
+  true,
+)
 
 // on click, wait 500 milliseconds after last click then run a function
-document.getElementById('button').onclick = debounce(doSomethingToTeachUsersToWait, 500)
+document.getElementById('button').onclick = debounce(
+  doSomethingToTeachUsersToWait,
+  500,
+)
 
 // on click, run a function, then make sure it doesn't get run more than once
 // every 500 miliseconds
-document.getElementById('button').onclick = throttle(doSomethingWithNetwork, 500)
+document.getElementById('button').onclick = throttle(
+  doSomethingWithNetwork,
+  500,
+)
 ```
 
 ## License
@@ -52,7 +62,7 @@ document.getElementById('button').onclick = throttle(doSomethingWithNetwork, 500
 MIT © [Ben Williams](https://biwills.com)
 
 [build-badge]: https://img.shields.io/circleci/build/github/biw/tiny-throttle.svg?style=flat-square
-[build]: https://travis-ci.org/biw/tiny-throttle
+[build]: https://app.circleci.com/pipelines/github/biw/tiny-throttle
 [version-badge]: https://img.shields.io/npm/v/tiny-throttle.svg?style=flat-square
 [package]: https://www.npmjs.com/package/tiny-throttle
 [license-badge]: https://img.shields.io/npm/l/tiny-throttle.svg?style=flat-square

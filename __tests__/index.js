@@ -3,7 +3,8 @@ import { debounce, throttle } from '../src/index'
 jest.useFakeTimers()
 
 test('throttle function only fires once a second', () => {
-  Date.now = jest.fn()
+  Date.now = jest
+    .fn()
     .mockImplementationOnce(() => 1000)
     .mockImplementationOnce(() => 2002)
     .mockImplementationOnce(() => 2004)
@@ -23,7 +24,8 @@ test('throttle function only fires once a second', () => {
 })
 
 test('debounceLead function fires once then waits a second', () => {
-  Date.now = jest.fn()
+  Date.now = jest
+    .fn()
     .mockImplementationOnce(() => 1000)
     .mockImplementationOnce(() => 1500)
     .mockImplementationOnce(() => 2000)
