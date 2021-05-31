@@ -31,9 +31,8 @@ var debounceTail = function (callback, offset) {
 var debounce = function (callback, offset, leading) {
     if ( leading === void 0 ) leading = false;
 
-    return (leading ? debounceLead(callback, offset) : debounceTail(callback, offset));
+    return leading ? debounceLead(callback, offset) : debounceTail(callback, offset);
 };
-
 
 var throttle = function (callback, offset) {
   var baseTime = 0;

@@ -6,19 +6,21 @@
   "module": "dist/tiny-throttle.es.js",
   "main": "dist/tiny-throttle.js",
   "umd:main": "dist/tiny-throttle.umd.js",
-  "repository": "https://github.com/719ben/tiny-throttle",
+  "repository": "https://github.com/biw/tiny-throttle",
   "keywords": [
     "throttle",
     "debounce",
     "lodash"
   ],
-  "author": "719Ben <ben.williams@colorado.edu>",
+  "author": "Ben Williams <ben@biwills.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "node_modules/.bin/jest tests",
-    "lint": "node_modules/.bin/eslint **/*.js --fix",
+    "test": "jest",
+    "lint": "yarn eslint 'src/**/*.js'",
     "pack": "node_modules/.bin/webpack -p",
-    "reinstall": "rm -r node_modules && yarn cache clean && yarn",
     "build": "npm-run-all --silent clean -p rollup -p minify:* -s",
     "clean": "rimraf dist",
     "rollup": "rollup -c",
@@ -26,20 +28,27 @@
     "minify:umd": "uglifyjs $npm_package_umd_main -cm -o $npm_package_umd_main"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-jest": "^22.2.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.17.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "jest": "^22.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.3",
     "npm-run-all": "^4.1.2",
-    "prettier-eslint-cli": "^4.7.0",
-    "rollup": "^0.55.5",
-    "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-flow": "^1.1.1",
-    "uglify-js": "^3.3.10"
+    "prettier": "^2.3.0",
+    "prettier-eslint-cli": "^5.0.1",
+    "rollup": "^2.50.5",
+    "typescript": "^4.3.2",
+    "uglify-js": "^3.13.8"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
   }
 }
