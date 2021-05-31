@@ -6,7 +6,7 @@
   "module": "dist/tiny-throttle.es.js",
   "main": "dist/tiny-throttle.js",
   "umd:main": "dist/tiny-throttle.umd.js",
-  "repository": "https://github.com/719ben/tiny-throttle",
+  "repository": "https://github.com/biw/tiny-throttle",
   "keywords": [
     "throttle",
     "debounce",
