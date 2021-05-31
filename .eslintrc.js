@@ -1,32 +1,15 @@
 module.exports = {
-  "extends": [
-    "airbnb-base",
-    // "plugin:react/recommended"
+  extends: [
+    'eslint:recommended',
+    'prettier',
+    'plugin:prettier/recommended', // should always be the end
   ],
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 8,
-    "ecmaFeatures": {
-      // "jsx": true,
-      "experimentalObjectRestSpread": true
-    }
+  ignorePatterns: ['**/docs/*.ts'],
+  plugins: ['prettier'],
+  parser: '@typescript-eslint/parser',
+  env: {
+    node: true,
+    jest: true,
+    es6: true,
   },
-  "globals": {
-    "jest": false
-  },
-  "rules": {
-    "max-len": ["error", 80, {
-      "ignoreStrings": true,
-      "comments": 100
-    }],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single", { "avoidEscape": true }],
-    "semi-style": ["error", "first"],
-    "semi": ["error", "never"],
-    "space-before-function-paren": ["error", "always"],
-    "func-style": ["error", "expression", { "allowArrowFunctions": true }],
-    "func-names": ["error", "as-needed"],
-    // "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "rollup.config.js"]}]
-  }
 }

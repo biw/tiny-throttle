@@ -1,9 +1,5 @@
 import { debounce, throttle } from '../src/index'
 
-const {
-  describe, test, expect,
-} = global
-
 jest.useFakeTimers()
 
 test('throttle function only fires once a second', () => {
@@ -26,7 +22,7 @@ test('throttle function only fires once a second', () => {
   expect(callback).toHaveBeenCalledTimes(5)
 })
 
-describe('debounceLead function fires once then waits a second', () => {
+test('debounceLead function fires once then waits a second', () => {
   Date.now = jest.fn()
     .mockImplementationOnce(() => 1000)
     .mockImplementationOnce(() => 1500)
@@ -46,7 +42,7 @@ describe('debounceLead function fires once then waits a second', () => {
   expect(callback).toHaveBeenCalledTimes(5)
 })
 
-describe('debounceTail function files one second after the last event', () => {
+test('debounceTail function files one second after the last event', () => {
   const callback = jest.fn()
   const containerFunc = debounce(callback, 1000)
   containerFunc()

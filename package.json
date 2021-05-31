@@ -12,13 +12,15 @@
     "debounce",
     "lodash"
   ],
-  "author": "719Ben <ben.williams@colorado.edu>",
+  "author": "Ben Williams <ben@biwills.com>",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "node_modules/.bin/jest tests",
-    "lint": "node_modules/.bin/eslint **/*.js --fix",
+    "test": "jest",
+    "lint": "yarn eslint 'src/**/*.js'",
     "pack": "node_modules/.bin/webpack -p",
-    "reinstall": "rm -r node_modules && yarn cache clean && yarn",
     "build": "npm-run-all --silent clean -p rollup -p minify:* -s",
     "clean": "rimraf dist",
     "rollup": "rollup -c",
@@ -26,20 +28,23 @@
     "minify:umd": "uglifyjs $npm_package_umd_main -cm -o $npm_package_umd_main"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^4.25.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.2.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^4.17.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "jest": "^22.2.2",
     "npm-run-all": "^4.1.2",
+    "prettier": "^2.3.0",
     "prettier-eslint-cli": "^4.7.0",
-    "rollup": "^0.55.5",
+    "rollup": "^0.56.3",
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-flow": "^1.1.1",
+    "typescript": "^4.3.2",
     "uglify-js": "^3.3.10"
   }
 }
