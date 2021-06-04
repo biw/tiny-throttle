@@ -1,7 +1,7 @@
 {
   "name": "tiny-throttle",
   "description": "🚗 A 311 byte (gziped) throttle & debounce package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "jsnext:main": "dist/tiny-throttle.es.js",
   "module": "dist/tiny-throttle.es.js",
   "main": "dist/tiny-throttle.js",
