@@ -6,6 +6,7 @@
   "module": "dist/tiny-throttle.es.js",
   "main": "dist/tiny-throttle.js",
   "umd:main": "dist/tiny-throttle.umd.js",
+  "types": "index.d.ts",
   "repository": "https://github.com/biw/tiny-throttle",
   "keywords": [
     "throttle",
@@ -15,7 +16,8 @@
   "author": "Ben Williams <ben@biwills.com>",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "jest",
