@@ -1,7 +1,6 @@
 # tiny-throttle 🚗
 
 [![Build Status][build-badge]][build]
-[![twitter][twitter-badge]][twitter]
 [![version][version-badge]][package]
 [![bundlephobia][bundlephobia-badge]][bundlephobia]
 [![MIT License][license-badge]][license]
@@ -67,7 +66,5 @@ MIT © [Ben Williams](https://biwills.com)
 [package]: https://www.npmjs.com/package/tiny-throttle
 [license-badge]: https://img.shields.io/npm/l/tiny-throttle.svg?style=flat-square
 [license]: https://github.com/biw/tiny-throttle/blob/main/LICENSE
-[twitter-badge]: https://img.shields.io/twitter/follow/biwills.svg?style=flat-square&logo=twitter&label=Follow
-[twitter]: https://twitter.com/biwills
 [bundlephobia]: https://bundlephobia.com/result?p=tiny-throttle
 [bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/tiny-throttle?style=flat-square
