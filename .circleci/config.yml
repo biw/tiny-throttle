@@ -8,7 +8,7 @@ orbs:
 jobs:
   build-and-test:
     docker:
-      - image: cimg/node:15.1
+      - image: cimg/node:18.12.1
     steps:
       - checkout
       - node/install-packages:
