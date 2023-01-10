@@ -4,10 +4,8 @@ const debounceLead = (callback, offset) => {
     const currentTime = Date.now()
     if (baseTime + offset <= currentTime) {
       callback(...args)
-      baseTime = currentTime
-    } else {
-      baseTime = currentTime
     }
+    baseTime = currentTime
   }
 }
 
@@ -15,9 +13,7 @@ const debounceTail = (callback, offset) => {
   let timeoutFunc = null
   return (...args) => {
     clearTimeout(timeoutFunc)
-    timeoutFunc = setTimeout(() => {
-      callback(...args)
-    }, offset)
+    timeoutFunc = setTimeout(() => callback(...args), offset)
   }
 }
 

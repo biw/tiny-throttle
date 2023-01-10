@@ -7,10 +7,8 @@ var debounceLead = function (callback, offset) {
     var currentTime = Date.now();
     if (baseTime + offset <= currentTime) {
       callback.apply(void 0, args);
-      baseTime = currentTime;
-    } else {
-      baseTime = currentTime;
     }
+    baseTime = currentTime;
   }
 };
 
@@ -21,9 +19,7 @@ var debounceTail = function (callback, offset) {
     while ( len-- ) args[ len ] = arguments[ len ];
 
     clearTimeout(timeoutFunc);
-    timeoutFunc = setTimeout(function () {
-      callback.apply(void 0, args);
-    }, offset);
+    timeoutFunc = setTimeout(function () { return callback.apply(void 0, args); }, offset);
   }
 };
 
