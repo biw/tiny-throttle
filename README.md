@@ -7,7 +7,7 @@
 
 A throttle & debounce package with a tiny file size.
 
-At only **329 bytes** it is **83% smaller than lodash's `_.debounce()` & `_.throttle()`**
+At only **326 bytes** it is **83% smaller than lodash's `_.debounce()` & `_.throttle()`**
 
 ## Install
 
