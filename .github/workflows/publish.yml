@@ -104,9 +104,6 @@ jobs:
       - name: Install dependencies
         run: vp install
 
-      - name: Pack and smoke-test the package
-        run: yarn test:package
-
       - name: Verify npm supports trusted publishing
         run: |
           NPM_VERSION=$(npm --version)

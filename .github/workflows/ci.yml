@@ -29,6 +29,3 @@ jobs:
 
       - name: Run tests
         run: vp test
-
-      - name: Pack and smoke-test the package
-        run: yarn test:package

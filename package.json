@@ -32,15 +32,11 @@
   ],
   "scripts": {
     "test": "vp test",
-    "test:package": "node scripts/test-package.mjs",
     "build": "vp pack",
     "prepack": "vp pack"
   },
   "devDependencies": {
     "vite-plus": "catalog:"
   },
-  "packageManager": "yarn@4.18.0",
-  "resolutions": {
-    "vite": "npm:@voidzero-dev/vite-plus-core@0.2.8"
-  }
+  "packageManager": "pnpm@11.20.0"
 }

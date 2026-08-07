@@ -9,7 +9,7 @@ A tiny throttle & debounce package.
 ## Install
 
 ```bash
-yarn add tiny-throttle
+pnpm add tiny-throttle
 ```
 
 or

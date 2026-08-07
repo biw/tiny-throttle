@@ -13,7 +13,7 @@ export default defineConfig({
     ignorePatterns: ['dist/**'],
   },
   test: {
-    include: ['__tests__/**/*.test.js'],
+    include: ['tests/**/*.test.js'],
   },
   pack: {
     entry: {

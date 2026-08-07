@@ -4,8 +4,11 @@
 # Logs
 logs
 *.log
-yarn-debug.log*
-yarn-error.log*
+npm-debug.log*
+pnpm-debug.log*
+
+# Legacy Yarn cache
+.yarn/
 
 # Runtime data
 pids
@@ -23,10 +26,6 @@ dist/
 
 # Output of 'npm pack'
 *.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-.yarn/
 
 # dotenv environment variables file
 .env
