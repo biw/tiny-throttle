@@ -2,9 +2,9 @@
   "name": "tiny-throttle",
   "description": "🚗 A 311 byte (gziped) throttle & debounce package",
   "version": "1.0.4",
-  "jsnext:main": "dist/tiny-throttle.es.js",
-  "module": "dist/tiny-throttle.es.js",
-  "main": "dist/tiny-throttle.js",
+  "jsnext:main": "dist/tiny-throttle.mjs",
+  "module": "dist/tiny-throttle.mjs",
+  "main": "dist/tiny-throttle.cjs",
   "umd:main": "dist/tiny-throttle.umd.js",
   "types": "index.d.ts",
   "repository": "https://github.com/biw/tiny-throttle",
@@ -20,37 +20,15 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "jest",
-    "lint": "yarn eslint 'src/**/*.js'",
-    "pack": "node_modules/.bin/webpack -p",
-    "build": "npm-run-all --silent clean -p rollup -p minify:* -s",
-    "clean": "rimraf dist",
-    "rollup": "rollup -c",
-    "minify:cjs": "uglifyjs $npm_package_main -cm toplevel --source-map -o $npm_package_main",
-    "minify:umd": "uglifyjs $npm_package_umd_main -cm -o $npm_package_umd_main"
+    "test": "vp test",
+    "build": "vp pack",
+    "prepare": "vp pack"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
-    "@rollup/plugin-buble": "^1.0.1",
-    "@typescript-eslint/parser": "^5.48.1",
-    "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "jest": "^29.3.1",
-    "npm-run-all": "^4.1.2",
-    "prettier": "^2.8.2",
-    "prettier-eslint-cli": "^7.1.0",
-    "rollup": "^3.9.1",
-    "typescript": "^4.9.4",
-    "uglify-js": "^3.17.4"
+    "vite-plus": "catalog:"
   },
-  "babel": {
-    "env": {
-      "test": {
-        "plugins": [
-          "@babel/plugin-transform-modules-commonjs"
-        ]
-      }
-    }
+  "packageManager": "yarn@4.18.0",
+  "resolutions": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@0.2.8"
   }
 }

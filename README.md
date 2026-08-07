@@ -60,8 +60,8 @@ document.getElementById('button').onclick = throttle(
 
 MIT © [Ben Williams](https://biwills.com)
 
-[build-badge]: https://img.shields.io/circleci/build/github/biw/tiny-throttle.svg?style=flat-square
-[build]: https://app.circleci.com/pipelines/github/biw/tiny-throttle
+[build-badge]: https://github.com/biw/tiny-throttle/actions/workflows/ci.yml/badge.svg?branch=main
+[build]: https://github.com/biw/tiny-throttle/actions/workflows/ci.yml
 [version-badge]: https://img.shields.io/npm/v/tiny-throttle.svg?style=flat-square
 [package]: https://www.npmjs.com/package/tiny-throttle
 [license-badge]: https://img.shields.io/npm/l/tiny-throttle.svg?style=flat-square
