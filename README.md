@@ -1,9 +1,7 @@
 # tiny-throttle 🚗
 
-[![Build Status][build-badge]][build]
-[![version][version-badge]][package]
-[![bundlephobia][bundlephobia-badge]][bundlephobia]
-[![MIT License][license-badge]][license]
+[![Build Status](https://badgen.net/github/checks/biw/tiny-throttle/main)](https://github.com/biw/tiny-throttle/actions/workflows/ci.yml)
+[![version](https://badgen.net/npm/v/tiny-throttle)](https://www.npmjs.com/package/tiny-throttle)
 
 A throttle & debounce package with a tiny file size.
 
@@ -59,12 +57,3 @@ document.getElementById('button').onclick = throttle(
 ## License
 
 MIT © [Ben Williams](https://biwills.com)
-
-[build-badge]: https://github.com/biw/tiny-throttle/actions/workflows/ci.yml/badge.svg?branch=main
-[build]: https://github.com/biw/tiny-throttle/actions/workflows/ci.yml
-[version-badge]: https://img.shields.io/npm/v/tiny-throttle.svg?style=flat-square
-[package]: https://www.npmjs.com/package/tiny-throttle
-[license-badge]: https://img.shields.io/npm/l/tiny-throttle.svg?style=flat-square
-[license]: https://github.com/biw/tiny-throttle/blob/main/LICENSE
-[bundlephobia]: https://bundlephobia.com/result?p=tiny-throttle
-[bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/tiny-throttle?style=flat-square

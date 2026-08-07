@@ -1,2 +1,0 @@
-const e=(e,t)=>{let n=0;return(...r)=>{let i=Date.now();n+t<=i&&e(...r),n=i}},t=(e,t)=>{let n=null;return(...r)=>{clearTimeout(n),n=setTimeout(()=>e(...r),t)}},n=(n,r,i=!1)=>i?e(n,r):t(n,r),r=(e,t)=>{let n=0;return(...r)=>{let i=Date.now();n+t<=i&&(n=i,e(...r))}};export{n as debounce,r as throttle};
-//# sourceMappingURL=tiny-throttle.mjs.map

@@ -15,6 +15,9 @@ node_modules/
 
 .eslintcache
 
+# Generated package bundles
+dist/
+
 # Output of 'npm pack'
 *.tgz
 
