@@ -1,13 +1,23 @@
 {
   "name": "tiny-throttle",
-  "description": "🚗 A 311 byte (gziped) throttle & debounce package",
-  "version": "1.0.4",
-  "jsnext:main": "dist/tiny-throttle.mjs",
-  "module": "dist/tiny-throttle.mjs",
-  "main": "dist/tiny-throttle.cjs",
-  "umd:main": "dist/tiny-throttle.umd.js",
-  "types": "index.d.ts",
+  "description": "🚗 A tiny throttle & debounce package",
+  "version": "2.0.0",
+  "main": "./dist/tiny-throttle.cjs",
+  "module": "./dist/tiny-throttle.mjs",
+  "unpkg": "./dist/tiny-throttle.umd.js",
+  "jsdelivr": "./dist/tiny-throttle.umd.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./dist/tiny-throttle.mjs",
+      "require": "./dist/tiny-throttle.cjs"
+    },
+    "./umd": "./dist/tiny-throttle.umd.js"
+  },
   "repository": "https://github.com/biw/tiny-throttle",
+  "bugs": "https://github.com/biw/tiny-throttle/issues",
+  "homepage": "https://github.com/biw/tiny-throttle#readme",
   "keywords": [
     "throttle",
     "debounce",
@@ -15,14 +25,16 @@
   ],
   "author": "Ben Williams <ben@biwills.com>",
   "license": "MIT",
+  "sideEffects": false,
   "files": [
     "dist",
     "index.d.ts"
   ],
   "scripts": {
     "test": "vp test",
+    "test:package": "node scripts/test-package.mjs",
     "build": "vp pack",
-    "prepare": "vp pack"
+    "prepack": "vp pack"
   },
   "devDependencies": {
     "vite-plus": "catalog:"

@@ -2,10 +2,9 @@
 
 [![Build Status](https://badgen.net/github/checks/biw/tiny-throttle/main)](https://github.com/biw/tiny-throttle/actions/workflows/ci.yml)
 [![version](https://badgen.net/npm/v/tiny-throttle)](https://www.npmjs.com/package/tiny-throttle)
+[![npm downloads](https://badgen.net/npm/dt/tiny-throttle)](https://www.npmjs.com/package/tiny-throttle)
 
-A throttle & debounce package with a tiny file size.
-
-At only **326 bytes** it is **83% smaller than lodash's `_.debounce()` & `_.throttle()`**
+A tiny throttle & debounce package.
 
 ## Install
 
@@ -16,7 +15,7 @@ yarn add tiny-throttle
 or
 
 ```bash
-npm install --save tiny-throttle
+npm install tiny-throttle
 ```
 
 or
@@ -33,7 +32,7 @@ Then you can find the library on `window.tinyThrottle`
 import { debounce, throttle } from 'tiny-throttle'
 
 // on click, run a function
-// then wait 500 miliseconds from last click to run again on next click
+// then wait 500 milliseconds from last click to run again on next click
 document.getElementById('button').onclick = debounce(
   doSomethingWithNetwork,
   500,
@@ -47,7 +46,7 @@ document.getElementById('button').onclick = debounce(
 )
 
 // on click, run a function, then make sure it doesn't get run more than once
-// every 500 miliseconds
+// every 500 milliseconds
 document.getElementById('button').onclick = throttle(
   doSomethingWithNetwork,
   500,
