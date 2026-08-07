@@ -1,8 +1,14 @@
+# macOS Finder metadata
+.DS_Store
+
 # Logs
 logs
 *.log
-yarn-debug.log*
-yarn-error.log*
+npm-debug.log*
+pnpm-debug.log*
+
+# Legacy Yarn cache
+.yarn/
 
 # Runtime data
 pids
@@ -15,11 +21,11 @@ node_modules/
 
 .eslintcache
 
+# Generated package bundles
+dist/
+
 # Output of 'npm pack'
 *.tgz
-
-# Yarn Integrity file
-.yarn-integrity
 
 # dotenv environment variables file
 .env

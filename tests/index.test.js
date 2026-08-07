@@ -1,10 +1,18 @@
+import { afterEach, beforeEach, expect, test, vi } from 'vite-plus/test'
+
 import { debounce, throttle } from '../src/index'
 
-jest.useFakeTimers()
+beforeEach(() => {
+  vi.useFakeTimers()
+})
+
+afterEach(() => {
+  vi.useRealTimers()
+  vi.restoreAllMocks()
+})
 
 test('throttle function only fires once a second', () => {
-  Date.now = jest
-    .fn()
+  vi.spyOn(Date, 'now')
     .mockImplementationOnce(() => 1000)
     .mockImplementationOnce(() => 2002)
     .mockImplementationOnce(() => 2004)
@@ -15,7 +23,7 @@ test('throttle function only fires once a second', () => {
     .mockImplementationOnce(() => 5007)
     .mockImplementationOnce(() => 5008)
     .mockImplementationOnce(() => 5009)
-  const callback = jest.fn()
+  const callback = vi.fn()
   const containerFunc = throttle(callback, 1000)
 
   ;[...Array(10)].forEach(containerFunc)
@@ -24,8 +32,7 @@ test('throttle function only fires once a second', () => {
 })
 
 test('debounceLead function fires once then waits a second', () => {
-  Date.now = jest
-    .fn()
+  vi.spyOn(Date, 'now')
     .mockImplementationOnce(() => 1000)
     .mockImplementationOnce(() => 1500)
     .mockImplementationOnce(() => 2000)
@@ -35,8 +42,9 @@ test('debounceLead function fires once then waits a second', () => {
     .mockImplementationOnce(() => 5000)
     .mockImplementationOnce(() => 6000)
     .mockImplementationOnce(() => 7000)
+    .mockImplementationOnce(() => 7001)
 
-  const callback = jest.fn()
+  const callback = vi.fn()
   const containerFunc = debounce(callback, 1000, true)
 
   ;[...Array(10)].forEach(containerFunc)
@@ -44,26 +52,26 @@ test('debounceLead function fires once then waits a second', () => {
   expect(callback).toHaveBeenCalledTimes(5)
 })
 
-test('debounceTail function files one second after the last event', () => {
-  const callback = jest.fn()
+test('debounceTail function fires one second after the last event', () => {
+  const callback = vi.fn()
   const containerFunc = debounce(callback, 1000)
   containerFunc()
 
-  jest.advanceTimersByTime(500)
+  vi.advanceTimersByTime(500)
 
   containerFunc()
 
-  jest.advanceTimersByTime(1000)
+  vi.advanceTimersByTime(1000)
 
   containerFunc()
 
   containerFunc()
 
-  jest.advanceTimersByTime(1500)
+  vi.advanceTimersByTime(1500)
 
   containerFunc()
 
-  jest.advanceTimersByTime(1000)
+  vi.advanceTimersByTime(1000)
 
   containerFunc()
 
