@@ -29,3 +29,11 @@ jobs:
 
       - name: Run tests
         run: vp test
+
+  publish:
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/publish.yml
+    permissions:
+      contents: write
+      id-token: write
